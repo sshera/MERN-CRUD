@@ -100,7 +100,7 @@ const mapStateToProps = (state) => ({
 
 const mapActionToProps = {
     fetchAllPostMessages: actions.fetchAll,
-    deletePostMessage: actions.Delete
+    deletePostMessage: actions.deleteRecord
 }
 // to access: props.fetchAllPostMessages
  

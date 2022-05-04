@@ -57,7 +57,7 @@ const PostMessageForm = (props) => {
         setErrors,
         handleInputChange,
         resetForm
-    } = useForm(initialFieldValues.props.setCurrentId);
+    } = useForm(initialFieldValues);
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -82,11 +82,11 @@ const PostMessageForm = (props) => {
         <form autoComplete="off" noValidate onSubmit={handleSubmit} /* className={`${classes.root} ${classes.form}`} */>
             <TextField name="title" variant="outlined" label="Title" fullWidth
                 value={values.title} onChange={handleInputChange}
-                {...(errors.title && {error: true, helperText: errors.title})} />
+                /* {...(errors.title && {error: true, helperText: errors.title})} */ />
             <br/><br/>
             <TextField name="message" variant="outlined" label="Message" fullWidth
                 multiline rows={4} value={values.message} onChange={handleInputChange} 
-                {...(errors.message && {error: true, helperText: errors.message})} />
+                /* {...(errors.message && {error: true, helperText: errors.message})} */ />
             <br/><br/>
             <div align="center"><Button variant="contained" color="primary" size="large" type="submit" /* className={classes.postBtn}*/>
                 Submit
